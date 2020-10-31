@@ -1,3 +1,4 @@
+# declare list of numbers
 numbers = [1,6,5,3,4,9,7,6,2,1,13,65,7,84,95,24,31]
 
 # break statement is used to terminate a for or while loop early
