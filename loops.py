@@ -9,7 +9,7 @@ newNumber = int(input("Enter a non-negative number: "))     # initializes the va
 
 # while loops repeats its body code as long as the expression after it is true
 while newNumber >= 0:
-    numbers = numbers + [newNumber]
+    numbers.append(newNumber)
     newNumber = int(input("Enter a non-negative number: "))
 
 print("Here is your array: " + str(numbers))
