@@ -78,5 +78,3 @@ print(x + y)
 # If the variable is outside of a function, it is considered a global variable, which means it
 # can be used inside and outside functions. If the variable is inside a function, it can only be
 # used inside that particular function.
-
-# Now let's do some challenges to test your comprehension.

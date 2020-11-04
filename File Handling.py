@@ -41,7 +41,7 @@ print(f.read())
 # This ranges due to how everyone organizes their computer differently.
 # For example, the file might be in a folder in the Desktop directory while this .py file is within
 # a separate folder within the Desktop directory.
-# The path would then be "C:\\Users\\username\\Desktop\\NotPythonFiles\\othertext.txt"
+# The path might then be "C:\\Users\\username\\Desktop\\NotPythonFiles\\othertext.txt"
 
 # By default, read() returns the entire file. But sometimes we don't want that. We can specify how
 # many characters we want to read simply by inputting that as an argument in read().
@@ -67,6 +67,19 @@ f.close()
 '''
 
 '''
+# As a side note, it is quite handy to use the "with" statement with file handling code. It makes the
+# matter of handling the open/close status quite easy. We can replace the above example with the code
+# shown below. After running the code within the "with" statement, the file will automatically close,
+# ensuring there will be no bugs within your code related to that file opening.
+with open("demofile.txt") as f:
+    print(f.read())
+
+# You can also open multiple files at once using this statement. You can access more data without
+# having to worry about all the open files.
+# Ex: with open("demofile.txt") as f, open("demofile2.txt") as g:
+'''
+
+'''
 # Instead of reading a file, let's write to one.
 # To do this, you must open the file using the proper mode: either append ("a") or write ("w")
 # First let's append some content into the file using "a" mode.
@@ -87,4 +100,29 @@ f.close()
 f = open("demofile.txt")
 print(f.read())
 f.close()
+'''
+
+# Now let's do some challenges to test your comprehension.
+'''
+# Challenge 1: Write a file that has a list of your top 3 favorite movie lines. Check the file to see if it worked.
+with open("challenge1.txt", "w") as f:
+    f.write("1. Hasta la vista, baby.\n")
+    f.write("2. The arrogance of man is thinking nature is in our control, and not the other way around. Let them fight.\n")
+    f.write("3. Come on you apes! You want to live forever?\n")
+with open("challenge1.txt") as f:
+    print(f.read())
+'''
+
+'''
+# Challenge 2: Combine two lines from two separate files and print them.
+with open("challenge2.txt", "w") as f:
+    g = open("demofile.txt")
+    h = open("challenge1.txt")
+    line1 = g.readline()
+    line2 = h.readline()
+    line1.strip("\n")
+    line2.strip("\n")
+    f.write(line1 + line2)
+    g.close()
+    h.close()
 '''
