@@ -1,3 +1,4 @@
+# %%
 # assign inputNumber a user input
 inputNumber = int(input("Enter a number: "))    # int converts a string value into an int value
 
@@ -18,3 +19,4 @@ elif inputNumber > 0:
 
 else:
     print("This number is 0.")
+# %%

@@ -1,6 +1,8 @@
+# %%
 # Methods are specific functions that are used for data types
 # Methods are called with variableName.methodName()
 # Here are some methods used for lists
+# Take some time and read through the code to really understand what is going on in each section of the code.
 
 # copy() - returns a copy of the list
 numbers = [9, 1, 0, 7, 4]
@@ -61,3 +63,4 @@ numbers.clear()
 print("\nclear()")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
+# %%

@@ -1,3 +1,4 @@
+# %%
 # assign magicNumber and inputNumber an integer value
 # try changing them and see what happens
 magicNumber = 10
@@ -19,3 +20,4 @@ else:
 
 # Try changing the code so that you assign inputNumber a value
 # from the terminal.
+# %%

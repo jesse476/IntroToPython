@@ -1,3 +1,4 @@
+# %%
 # Lists are a data type that can store multiple values
 #   written as a comma separated list.
 numbers = [1, 2, 3, 4, 5]
@@ -27,3 +28,4 @@ numbers = numbers + [6, 7, 8, 9, 10]
 print("Here is the new list: " + str(numbers))
 
 # Add some numbers to the list and print the numbers that you added.
+# %%

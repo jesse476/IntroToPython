@@ -1,11 +1,4 @@
 '''
-Project in a Box Intro to Python Workshop Challenge #
-'''
-
-# Delete the triple apostrophes to uncomment each block of code to run the examples. You need to
-# delete the top and bottom sets to completely uncomment each section.
-
-'''
 # Libraries are sets of useful functions that eliminate the need to write your own code from scratch.
 # There are over 100,000 Python libraries out there. We will only focus on a few popular libraries
 # for our ML purposes today.
@@ -18,7 +11,7 @@ import numpy
 import numpy as np
 '''
 
-'''
+# %%
 # Since the NumPy library is made to work with arrays, let's do just that. You can either create a list
 # and pass that through np.array() or simply input the list of data directly to create an array.
 # We will create the list first so that you can see how NumPy changes the list into an array.
@@ -33,9 +26,9 @@ print(array_1.ndim)
 # As you can see, the data type of list changes to that of an ndarray. We can also use .ndim to check
 # the dimension of the array we created. In this case, it is still a 1D array so it is all good. There
 # is no general array size limit but you are constrained by the amount of memory on your computer.
-'''
+# %%
 
-'''
+# %%
 # If you are familiar with C programming, working with NumPy arrays should be fairly straightforward.
 import numpy as np
 array_1 = np.array([1,2,3,4,5])
@@ -55,9 +48,9 @@ print(array_2[2,0])
 print(array_2.shape)
 # As you can see, is it important to know the dimensions of your multi-dimensional arrays when indexing.
 # Otherwise, you can end up making a mistake when grabbing data from a certain index.
-'''
+# %%
 
-'''
+# %%
 # There will be some times when you need to create an array of data to work with as test data or something else.
 # To do this, we can use a couple functions within the NumPy library.
 # We can use .arange() to create an array of evenly spaced values within a given interval.
@@ -71,9 +64,9 @@ print(array_2)
 # The first input to arange is the start number. If left blank, it defaults to 0.
 # The second input is the stop number. The created array does not include this number. You must include it.
 # The third input is the step size. If left blank, it defaults to 1.
-'''
+# %%
 
-'''
+# %%
 # Since NumPy is useful for arrays, we can also take advantage of some matrix manipulation functions.
 # Let's set up two practice matrices.
 import numpy as np
@@ -87,11 +80,12 @@ print(np.add(array1,array2))
 print(np.divide(array1, array2))
 # Let's check if we can transpose a matrix.
 print(array1.T)
-'''
+# %%%
 
-'''
+# %%
 # NumPy also has another very important functionality. It can create pseudo random numbers. If your project or code
 # needs some sort of randomness in it, it is very easy to implement using this library. Let's view some examples.
+# The way to import JUST the random module from the library is shown below.
 from numpy import random
 num = random.randint(10)                      # Returns random number from 0 to 10
 print(num)
@@ -105,11 +99,12 @@ numfloat_array = random.rand(4)               # Returns 1D array containing 4 nu
 print(numfloat_array)
 numfloat_array_2D = random.rand(2,2)          # Returns 2D array containing 4 numbers between 0 and 1
 print(numfloat_array_2D)
-'''
+# %%
 
-'''
+# %%
 # Now the previous examples only generated new random numbers. But what if we want to randomly choose from data we
-# already have? We can also do that with the random module.
+# already have? We can also do that with the random module. Since we also want to use other modules besides the
+# random module, we will import the entire library.
 from numpy import random
 import numpy as np
 array_1 = np.arange(10)                           # Create an array of data from 0 to 9
@@ -118,7 +113,7 @@ new_array = random.choice(array_1)                # Return a random value from i
 print(new_array)
 new_array_2D = random.choice(array_1, size=(2,2)) # Return an array filled with random values from input array
 print(new_array_2D)
-'''
+# %%
 
 # If you would like to know more about NumPy and all the other things you can do with this library,
 # check out it's website and read through the documention. We have barely explored the tip of what
@@ -134,15 +129,15 @@ import matplotlib
 import matplotlib.pyplot as plt
 '''
 
-'''
+# %%
 # Let's create a simple plot to show how things work. We will need NumPy to create some data to plot and
 # we will need matplotlib to plot the data.
 import numpy as np
 import matplotlib.pyplot as plt
 time = np.arange(0,15,0.1)      # Create array containing our time values (0 to 15 seconds in 100ms intervals)
 amplitude = np.sin(time)        # Take the sine of the time values
-plt.plot(time, amplitude)       # Plot time vs amplitude
-#plt.plot(time, amplitude, 'rx:')
+#plt.plot(time, amplitude)       # Plot time vs amplitude
+plt.plot(time, amplitude, 'rx:')
 plt.title('Sine Wave')          # Create a title for our plot
 plt.xlabel('Time')              # Label our x-axis so we know it is time
 plt.ylabel('Amplitude')         # Label our y-axis so we know it is amplitude
@@ -155,9 +150,9 @@ plt.show()                      # Show the plot we created
 # There are other ways to change the line properties but they are for aesthetic/visual purposes only. For the full
 # list of how you can customize your plot through the plot() function, please visit the link below.
 # Website URL: https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot
-'''
+# %%
 
-'''
+# %%
 # Now let's show off some other ways of plotting courtesy of the Matplotlib website.
 # It is possible to create a plot using categorical variables instead of just numerical variables if need be.
 # We will also show that it is possible to create subplots within each figure you create.
@@ -173,6 +168,13 @@ plt.subplot(133)                            # Keep figure divided into a 1x3 gri
 plt.plot(names, values)                     # Create a normal line plot using original data
 plt.suptitle('Categorical Plotting')        # Create a centered title for entire figure instead of each plot individually
 plt.show()                                  # Show the plot
-'''
+# By using .figure(), we can change the width and height of the figure we are creating so make enough space
+# for the other plots. The figure we created has a width of 9 and height of 3 in inches. If we decided to create
+# a different plot that is not on the same window as the previous plot, we would need to invoke .figure() again.
+# %%
 
+# %%
 # Let's go and see a little bit more about the different plots besides line plots
+import matplotlib.pyplot as plt
+names = ['']
+# %%
