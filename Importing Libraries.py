@@ -174,7 +174,44 @@ plt.show()                                  # Show the plot
 # %%
 
 # %%
-# Let's go and see a little bit more about the different plots besides line plots
+# Let's go and see a little bit more about the different plots besides line plots.
+# We will look into bar graphs first.
 import matplotlib.pyplot as plt
-names = ['']
+x = ['Time', 'Interest', 'Will']                        # Create categories for the bar graph
+y = [20, 30, 10]                                        # Give each category a value
+plt.bar(x, y, color = "green", width = 0.5)             # Create a bar graph with a certain color and bar width
+# plt.bar(x, y, color = "red", width = 0.1)             # Create a bar graph with a certain color and bar width
+# plt.barh(x, y, color = "indigo", height = 0.5)        # Create a horizontal bar graph with a certain color and bar height
+# plt.barh(x, y, color = "hotpink", height = 0.1)       # Create a horizontal bar graph with a certain color and bar height
+plt.show()
+
+# If you want, you don't have to add the color and width/height arguments if you want to stick to the default values of blue and 0.8
+# Try out each line that has been commented out to see the different plots. If you want to change the color yourself,
+# you need to use HTML color names or their corresponding Hex values.
 # %%
+
+# %%
+# Let's look into scatter plots next.
+# Let's use some functions from numpy to generate some data for us to work with.
+from numpy import random
+import matplotlib.pyplot as plt
+x = random.randint(100, size = (10))        # Create an array full of random data
+y = random.randint(100, size = (10))        # Do it again
+plt.scatter(x, y)                           # Plot them against each other
+x = random.randint(100, size = (10))        # Create a second set of random data
+y = random.randint(100, size = (10))        # Do it again
+plt.scatter(x, y)                           # Plot the second scatter plot on the same figure
+plt.show()                                  # Show both plots on same figure, but different colors.
+
+# You can also change the colors of the dots by adding color = "color you choose" as one of the arguments in plt.scatter()
+# You have to HTML color names as well.
+# You can also change the size of the dots, the transparency of the dots, or even change the dots to another shape if you want.
+# If you want to see how, visit https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter
+# %%
+
+'''
+If you would like to know more about Matplotlib and all the other things you can do with this library,
+check out it's website and read through the documention. We have barely explored one module of this library.
+I highly recommend checking it out if you have to time for it.
+Website URL: https://matplotlib.org/index.html
+'''
