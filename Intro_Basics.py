@@ -775,6 +775,7 @@ import numpy as np
 array_1 = np.array([1,2,3,4,5])
 print(array_1[0])
 print(array_1[4])
+
 # Accessing the array works the same if your array is bigger than 1D. Just take care of the extra coordinates. (x,y) is [y][x]
 # If you are confused with how the indexing works, simply go to the Variable Explorer on the right and double-click on the array variable name.
 # It'll show the index numbers for you.
@@ -782,13 +783,24 @@ array_2 = np.array([[1,2,3],[4,5,6]])
 print(array_2)
 print(array_2[0,0])
 print(array_2[1,0])
+print(array_2[0,:])                 # When you use ":", you ask for the entire row in this instance
 print(array_2.shape)
+
 # Now let's reshape the array.
 array_3 = array_2.reshape((3,2))
 print(array_3)
 print(array_3[0,0])
 print(array_3[2,0])
+print(array_3[:,0])                 # When you use ":", you ask for the entire column in this instance
 print(array_3.shape)
+
+# Let's reshape from 2D to 1D this time.
+array_4 = array_3.reshape((6,))     # We are creating a 1D array of length 6
+print(array_4)
+print(array_4[0])
+print(array_4[5])
+print(array_4.shape)
+
 # As you can see, is it important to know the dimensions of your multi-dimensional arrays when indexing.
 # Otherwise, you can end up making a mistake when grabbing data from a certain index.
 # %%
