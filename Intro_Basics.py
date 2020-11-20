@@ -72,6 +72,9 @@ There are other operators, such as bitwise operators, to be listed but those sho
 =============================================================================
 Variables
 =============================================================================
+Look to the top right console and click on the Variable explorer to view
+all of the current variables that are initialized. It'll tell you all sorts
+of information about the variable. Say for 
 '''
 # %%
 # Here is a basic intro into variables within Python.
@@ -132,6 +135,9 @@ print(z)
 x = 20
 y = 30
 print(x + y)
+# %%
+
+# %%
 # Unfortunately, you can't combine two data types together.
 x = "Karen is "
 y = 50
@@ -197,6 +203,7 @@ else:
 =============================================================================
 Lists
 =============================================================================
+If you've worked with other languages such as C or Java, lists should be familiar to you.
 '''
 # %%
 # Lists are a data type that can store multiple values written as a comma separated list.
@@ -211,16 +218,18 @@ print("Printing the 2nd number: " + str(numbers[1]))
 print("Printing the 3rd number: " + str(numbers[2]))
 print("Printing the 4th number: " + str(numbers[3]))
 print("Printing the 5th number: " + str(numbers[4]))
+# %%
 
+# %%
 # You can also have negative indexes to get values from the end of the list
 print("Printing 1st number from the end: " + str(numbers[-1]))
 print("Printing 2nd number from the end: " + str(numbers[-2]))
 print("Printing 3rd number from the end: " + str(numbers[-3]))
 print("Printing 4th number from the end: " + str(numbers[-4]))
 print("Printing 5th number from the end: " + str(numbers[-5]))
+# %%
 
-
-
+# %%
 # Lists can be added on to expand it
 numbers = numbers + [6, 7, 8, 9, 10]
 print("Here is the new list: " + str(numbers))
@@ -238,56 +247,56 @@ print("Here is the new list: " + str(numbers))
 numbers = [9, 1, 0, 7, 4]
 numbersCopy = numbers.copy()
 print("copy()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
-
+print("Altered list: " + str(numbers))
+print("Original list:     " + str(numbersCopy))
+# %%
 # append() - adds a single element to the end of the list
 numbers.append(5)
 print("\nappend()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
-
-# extent() - adds the elements of a list to the end of the list
+print("Altered list: " + str(numbers))
+print("Original list:     " + str(numbersCopy))
+# %%
+# extend() - adds the elements of a list to the end of the list
 numbers.extend([3, 6, 8, 2, 7])
 print("\nextend()")
 print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
-
-# insert() - inserts an element at a specific index
+print("Copy of original:     " + str(numbersCopy))
+# %%
+# insert(index position, number you want to insert) - inserts an element at a specific index
 numbers.insert(2, 7)
 print("\ninsert()")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # index() - returns index of the first element with a specified value
 print("\nindex(7): " + str(numbers.index(7)))
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # remove() - removes the first element with a specifed value
 numbers.remove(7)
 print("\nremove(7)")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # pop() - removes an element at a specific index
 numbers.pop(3)
 print("\npop()")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # sort() - sorts the list
 numbers.sort()
 print("\nsort()")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # reverse() - reverses the list
 numbers.reverse()
 print("\nreverse()")
 print("Original: " + str(numbers))
 print("Copy:     " + str(numbersCopy))
-
+# %%
 # clear() - clears the list
 numbers.clear()
 print("\nclear()")
@@ -316,7 +325,7 @@ while newNumber >= 0:
 
 print("Here is your array: " + str(numbers))
 
-
+# %%
 # for loops are used when you need to repeat a body of code over a range of numbers, such as each index of a list
 # len() is used to find the number of items within a list or the number of characters in a string
 # range(x) creates a range of values from 0 to (x - 1)
@@ -343,7 +352,7 @@ for idx in range(len(numbers)):
 print("Check with index()")
 print("numbers.index(7): " + str(numbers.index(7)))
 
-
+# %%
 # continue statements are used to go to the next iteration of the loop
 for idx in range(len(numbers)):
     if numbers[idx] % 2 == 0:
@@ -775,7 +784,7 @@ import numpy as np
 array_1 = np.array([1,2,3,4,5])
 print(array_1[0])
 print(array_1[4])
-
+# %%
 # Accessing the array works the same if your array is bigger than 1D. Just take care of the extra coordinates. (x,y) is [y][x]
 # If you are confused with how the indexing works, simply go to the Variable Explorer on the right and double-click on the array variable name.
 # It'll show the index numbers for you.
@@ -785,7 +794,7 @@ print(array_2[0,0])
 print(array_2[1,0])
 print(array_2[0,:])                 # When you use ":", you ask for the entire row in this instance
 print(array_2.shape)
-
+# %%
 # Now let's reshape the array.
 array_3 = array_2.reshape((3,2))
 print(array_3)
@@ -793,7 +802,7 @@ print(array_3[0,0])
 print(array_3[2,0])
 print(array_3[:,0])                 # When you use ":", you ask for the entire column in this instance
 print(array_3.shape)
-
+# %%
 # Let's reshape from 2D to 1D this time.
 array_4 = array_3.reshape((6,))     # We are creating a 1D array of length 6
 print(array_4)
