@@ -22,8 +22,6 @@ print("Hello, World!")
 
 # Try to print your name onto the terminal
 # %%
-
-# %%
 # input() prints the value inside the parenthesis
 # it also returns a string input from the terminal
 # the variable string is assigned the value returned from input()
@@ -32,7 +30,6 @@ print("Your input -> " + string)
 
 # Try typing something and see what happens
 # %%
-
 '''
 =============================================================================
 Operators
@@ -49,9 +46,10 @@ Arithmetic Operators:
 ** is exponent. You can do x ** y
 
 Logical Operators:
-and returns True if both statements are true. Ex: x>5 and x<9
-or returns True if one of the statements is true. Ex: x>5 or x<2
+and returns True if both statements are True. Ex: x>5 and x<9
+or returns True if one of the statements is True. Ex: x>5 or x<2
 not returns False if is result is True. Ex: not(x>5 and x<9)
+# Side note: True evaluates to 1 and False evaluates to 0
 
 Comparison Operators:
 == is equal to. You can do x == y.
@@ -65,7 +63,7 @@ Assignment operators:
 = sets a variable to a value. You can do x = 1
 += adds a number to itself. You can do x += 1 (which is the same as x = x + 1) (You can do this with all arithmetic operators)
 
-There are other operators, such as bitwise operators, to be listed but those shown above are the basic ones you'll most likely need.
+There are other operators, such as bitwise operators, that aren't listed here but those shown above are the basic ones you'll most likely need.
 '''
 
 '''
@@ -74,7 +72,11 @@ Variables
 =============================================================================
 Look to the top right console and click on the Variable explorer to view
 all of the current variables that are initialized. It'll tell you all sorts
-of information about the variable. Say for 
+of information about the variable. Say for example you run the cell below.
+You would be able to see "x" is of type int with a value of 5. In the later
+parts of this tutorial, you would be able to see lists and arrays as well.
+For those in particular, you would be able to double-click the value and
+see each individual value and their indexes. It's a very useful tool.
 '''
 # %%
 # Here is a basic intro into variables within Python.
@@ -82,7 +84,6 @@ x = 5
 y = "Karen"
 print(x)
 print(y)
-# %%
 
 # %%
 # As you can see, variables do not need to be a specific type (integer,string, etc.)
@@ -94,8 +95,6 @@ x = str(x)
 print(x)
 print(type(x))
 # We just changed the variable from an integer to a string.
-# %%
-
 # %%
 # Now let's get into possible names for variables. Python has certain rules for this.
 # The below example will throw syntax errors when run. It will specify the name which caused it.
@@ -111,8 +110,6 @@ variable2 = "Karen"
 vari-able = "Karen"
 vari able = "Karen"
 # %%
-
-# %%
 # You can assign values to your variables one by one or you can do it all at once if need be.
 x, y, z = 1, "Karen", "Manager"
 print(x)
@@ -124,8 +121,6 @@ print(x)
 print(y)
 print(z)
 # %%
-
-# %%
 # Manipulating variables is pretty simple as well but it does have it's rules as well.
 x = "I want to"
 y = " speak to the manager."
@@ -135,8 +130,6 @@ print(z)
 x = 20
 y = 30
 print(x + y)
-# %%
-
 # %%
 # Unfortunately, you can't combine two data types together.
 x = "Karen is "
@@ -164,26 +157,20 @@ Conditional Statements
 # %%
 # assign magicNumber and inputNumber an integer value. Try changing them and see what happens
 magicNumber = 10
-inputNumber = 10
+inputNumber = int(input("Tell me the magic number.\n"))
 
 # if statements evaluate the expression after it. If the expression is true, then the code under it runs.
 if inputNumber == magicNumber:
     print(str(inputNumber) + " is the magic number!")       # str() converts an int value to a string value
 
-
-# When the if statement does not run, the else statement will run. There can only be 1 else statment for every if statment
+# When the if statement does not run, the else statement will run. There can only be 1 else statment for every if statement
 # else statements are optional. It is not needed to make an if statement work properly.
 else:
-    print(str(inputNumber) + " is not he magic number.")
-
-
-# Try changing the code so that you assign inputNumber a value from the terminal.
-# %%
+    print(str(inputNumber) + " is not the magic number.")
 
 # %%
 # assign inputNumber a user input
 inputNumber = int(input("Enter a number: "))    # int converts a string value into an int value
-
 if inputNumber < 0:
     print("This is a negative number.")
 
@@ -191,10 +178,8 @@ if inputNumber < 0:
 # Similar to an else statement, elif statements will only run when the if statement did not run.
 # Similar to an if statement, elif statements will only run when the expression after it evaluates to True.
 # You can have multiple elif statements after an if statement. When an elif statement runs, all elif and else statements after it will not run.
-
 elif inputNumber > 0:
     print("This is a positive number.")
-
 else:
     print("This number is 0.")
 # %%
@@ -203,7 +188,7 @@ else:
 =============================================================================
 Lists
 =============================================================================
-If you've worked with other languages such as C or Java, lists should be familiar to you.
+If you've worked with other languages such as C or Java, lists should be kinda familiar to you.
 '''
 # %%
 # Lists are a data type that can store multiple values written as a comma separated list.
@@ -218,7 +203,6 @@ print("Printing the 2nd number: " + str(numbers[1]))
 print("Printing the 3rd number: " + str(numbers[2]))
 print("Printing the 4th number: " + str(numbers[3]))
 print("Printing the 5th number: " + str(numbers[4]))
-# %%
 
 # %%
 # You can also have negative indexes to get values from the end of the list
@@ -227,7 +211,6 @@ print("Printing 2nd number from the end: " + str(numbers[-2]))
 print("Printing 3rd number from the end: " + str(numbers[-3]))
 print("Printing 4th number from the end: " + str(numbers[-4]))
 print("Printing 5th number from the end: " + str(numbers[-5]))
-# %%
 
 # %%
 # Lists can be added on to expand it
@@ -235,8 +218,6 @@ numbers = numbers + [6, 7, 8, 9, 10]
 print("Here is the new list: " + str(numbers))
 
 # Add some numbers to the list and print the numbers that you added.
-# %%
-
 # %%
 # Methods are specific functions that are used for data types
 # Methods are called with variableName.methodName()
@@ -247,61 +228,70 @@ print("Here is the new list: " + str(numbers))
 numbers = [9, 1, 0, 7, 4]
 numbersCopy = numbers.copy()
 print("copy()")
-print("Altered list: " + str(numbers))
-print("Original list:     " + str(numbersCopy))
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # append() - adds a single element to the end of the list
 numbers.append(5)
-print("\nappend()")
-print("Altered list: " + str(numbers))
-print("Original list:     " + str(numbersCopy))
+print("append()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # extend() - adds the elements of a list to the end of the list
 numbers.extend([3, 6, 8, 2, 7])
-print("\nextend()")
-print("Original: " + str(numbers))
-print("Copy of original:     " + str(numbersCopy))
+print("extend()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # insert(index position, number you want to insert) - inserts an element at a specific index
 numbers.insert(2, 7)
-print("\ninsert()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("insert()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # index() - returns index of the first element with a specified value
-print("\nindex(7): " + str(numbers.index(7)))
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("index(7): " + str(numbers.index(7)))
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # remove() - removes the first element with a specifed value
 numbers.remove(7)
-print("\nremove(7)")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("remove(7)")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # pop() - removes an element at a specific index
 numbers.pop(3)
-print("\npop()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("pop()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # sort() - sorts the list
 numbers.sort()
-print("\nsort()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("sort()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # reverse() - reverses the list
 numbers.reverse()
-print("\nreverse()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("reverse()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
+
 # %%
 # clear() - clears the list
 numbers.clear()
-print("\nclear()")
-print("Original: " + str(numbers))
-print("Copy:     " + str(numbersCopy))
+print("clear()")
+print("Altered list:  " + str(numbers))
+print("Original list: " + str(numbersCopy))
 # %%
 
 '''
@@ -311,13 +301,11 @@ Loops
 '''
 # %%
 # Loops are used when you need to repeat code many times. If you want a user to input a list of numbers, you can use a loop to ask them for inputs.
-
 numbers = []                                                # initializing an empty list
 print("Entering a negative number will end the program.")
 newNumber = int(input("Enter a non-negative number: "))     # initializes the variable for the loop
                                                             # if the first number entered is negative
                                                             #   then the loop will not run
-
 # while loops repeats its body code as long as the expression after it is true
 while newNumber >= 0:
     numbers.append(newNumber)
@@ -335,6 +323,14 @@ for idx in range(len(numbers)):             # try changing the range to and see 
     print("Number " + str(idx + 1) + ": " + str(numbers[idx]))
 
 # %%
+# You can also iterate over a list like so.
+for x in numbers:
+    print(x)
+    
+# %%
+# You can iterate over a string using the same syntax.
+for x in "Project in a Box":
+    print(x)
 
 # %%
 # declare list of numbers
@@ -359,7 +355,6 @@ for idx in range(len(numbers)):
         print("Index " + str(idx) + " is an even number.")
         continue
     print("Index " + str(idx) + " is an odd number.")
-# %%
 
 # %%
 # Challenge 1
@@ -386,8 +381,6 @@ print("Goodbye!")
 # As you saw in the terminal, we were able to see our function execute and print our message.
 # It works the same as any normal code being run.
 # %%
-
-# %%
 # Now let's start passing some values into our function.
 # As a side note, Python uses the words values, parameters, and arguments interchangeably.
 def name_function(person):
@@ -402,36 +395,36 @@ name_function("Slim Shady.")
 # we could have made sure the value would always be a string if we had put str(person) instead of just
 # person in the print statement.
 # %%
-
-# %%
 # If you want to pass more than one argument through your function, you have to remember to call that
 # function with the same number of arguments. Otherwise, you will get an error when you try to run it.
 def test_function(name, age):
     print("My name is " + name + " and my age is " + age)
 
 test_function("Slim Shady")
-
-# Now let's try it with the correct number of arguments. Uncomment the line below.
-#test_function("Slim Shady", "48")
-
-# Additionally, the order they are written in is important. It must match the ordering in the function.
-# Now let's test the order importance. Uncomment the line below.
-#test_function("48", "Slim Shady")
-
-# See how the order is mixed up? We can make it so that the order no longer matters. Uncomment the line below.
-#test_function(name = "Slim Shady", age = "48")
-#est_function(age = "48", name = "Slim Shady")
 # %%
+# Now let's try it with the correct number of arguments.
+test_function("Slim Shady", "48")
+
+# %%
+# Additionally, the order they are written in is important. It must match the ordering in the function.
+# Now let's test the order importance.
+test_function("48", "Slim Shady")
+
+# %%
+# See how the order is mixed up? We can make it so that the order no longer matters.
+test_function(name = "Slim Shady", age = "48")
+
+# Once you set the argument equal to a value, the order doesn't matter. Try out the line
+# below if you don't believe.
+#est_function(age = "48", name = "Slim Shady")
 
 # %%
 # You can also set an argument to a default value if you end up not passing anything into the function.
-def test_function(name = "Slim Shady"):
+def test_function_2(name = "Slim Shady"):
     print("My name is " + name)
 
-test_function("Karen")
-test_function()
-test_function("Stan")
-# %%
+test_function_2()
+test_function_2("Stan")
 
 # %%
 # You can pass any data type through a function as an argument. You can do integers, strings, lists, etc. Let's also
@@ -452,30 +445,28 @@ def print_numbers(num1, num2, num3, num4):
 
 print(type(3))
 print_numbers(3, 0, 0, 5)
-# %%
 
 # %%
 # If you want to implement variables within your function (local variable), it works the same as outside.
-x = "Straight Outta Compton"
+# But there is a small problem. Can you see it?
 def print_var():
     x = "8 Mile"
     print(x)
 
+x = "Straight Outta Compton"
 print_var()
 print(x + " is a good movie.")
-# %%
 
 # %%
 # You must declare a global variable if you wish to change a global variable within a function.
-# Uncomment the first line of the function to fix this bit of code so it prints out Slim Shady instead..
-x = "Marshall Mathers"
+# Uncomment the first line of the function to fix this bit of code so it prints out Slim Shady instead.
 def my_func():
     #global x
     x = "Slim Shady"
 
+x = "Marshall Mathers"
 my_func()
 print("My name is " + x)
-# %%
 
 # %%
 # You can also have a function return a value instead of changing a variable.
@@ -484,6 +475,7 @@ def return_func(a):
 
 print(return_func(10))
 
+# %%
 # You can also return a boolean value of True or False.
 def return_func_bool(a):
     if a >= 0:
@@ -492,7 +484,6 @@ def return_func_bool(a):
         return False
     
 print(return_func_bool(20))
-# %%
 
 # %%
 # It is also possible to implement function recursion within Python. This is when a function can call
@@ -521,7 +512,6 @@ def check_string(sentence):
     
 
 print(check_string("mrowlatemymetalworm"))
-# %%
 
 # %%
 # Challenge 3: Create a function that checks whether a number is prime or not. The print statment is checking if 4 is a prime number.
@@ -529,7 +519,6 @@ def check_prime(num):
     
 
 print(check_prime(4))
-# %%
 
 # %%
 # Challenge 4: Create a function that displays the Fibonacci sequence. We want to display up to the
@@ -580,7 +569,6 @@ print("John's stamina is " + str(john.stamina))         # Show off the stamina o
 print("John's health is " + str(john.health))           # Show off the health of our bandit
 # We can see that the attack and defend functions are the methods of the Bandit class. By calling the method
 # through our created object, we can use the functions within our created class.
-# %%
 
 # %%
 # Now what if we want to define how much health and stamina our Bandit has at initialization?
@@ -600,24 +588,27 @@ class Bandit:
         if(self.health < 5):
             self.health += 1
         
-john = Bandit(10,5)                                     # Create an object based on our Bandit class. We will also give a custom health and stamina level
-carl = Bandit(5,3)                                      # Create a second "bandit" with different health and stamina
+john = Bandit(10,5)                                      # Create a second "bandit" with different health and stamina
 print("John will begin to move.")
 john.attack()                                           # Have our "bandit" attack something
 print("John's stamina is " + str(john.stamina))         # Show off the stamina of our bandit
 john.defend()                                           # Have our "bandit" defend
 print("John's stamina is " + str(john.stamina))         # Show off the stamina of our bandit
 print("John's health is " + str(john.health))           # Show off the health of our bandit
+
+# %%
+carl = Bandit(5,3)
 print("Carl will begin to move.")                       # Have our second bandit do stuff
 carl.attack()
 print("Carl's stamina is " + str(carl.stamina))
 carl.defend()
 print("Carl's stamina is " + str(carl.stamina))
 print("Carl's health is " + str(carl.health))
+
 # %%
 
 # You can continue to add on and tinker with this class if you would like. You can try to pass an argument through attack() in the class definition
-# so you can maybe change what the voice line will be or how much stamina is lost. Its your class so you get creative with it if you like.
+# so you can maybe change what the voice line will be or how much stamina is lost. Its your class so you can get creative with it if you like.
 
 '''
 =============================================================================
@@ -646,7 +637,6 @@ f = open("demofile.txt")
 f = open("demofile.txt", "rt")
 # which is the same as
 f = open("demofile.txt")
-# %%
 
 # %%
 # Now let's go over reading a file.
@@ -665,13 +655,10 @@ print(f.read())
 # a separate folder within the Desktop directory.
 # The path might then be "C:\\Users\\username\\Desktop\\NotPythonFiles\\othertext.txt"
 # %%
-
-# %%
 # By default, read() returns the entire file. But sometimes we don't want that. We can specify how
 # many characters we want to read simply by inputting that as an argument in read().
 f = open("demofile.txt")
 print(f.read(6))
-# %%
 
 # %%
 # If you want to read the file line by line instead, you can use readline() instead of read().
@@ -685,14 +672,11 @@ print(f.readline())
 # You may notice that when using the readline() method, there is an extra newliine that is printed in
 # terminal. This is because it also reads the "\n" newline character at the end of each line.
 # %%
-
-# %%
 # Once you are done with a file, it is good practice to always close it. If you don't close the file,
 # any changes made to it will not show. To do so, simply append a .close()
 f = open("demofile.txt")
 print(f.read())
 f.close()
-# %%
 
 # %%
 # As a side note, it is quite handy to use the "with" statement with file handling code. It makes the
@@ -705,7 +689,6 @@ with open("demofile.txt") as f:
 # You can also open multiple files at once using this statement. You can access more data without
 # having to worry about all the open files.
 # Ex: with open("demofile.txt") as f, open("demofile2.txt") as g:
-# %%
 
 # %%
 # Instead of reading a file, let's write to one.
@@ -714,11 +697,11 @@ with open("demofile.txt") as f:
 f = open("demofile.txt", "a")
 f.write("\nUse the Force, Luke.")
 f.close()
+# %%
 # Now let's reopen the file to see our changes.
 f = open("demofile.txt")
 print(f.read())
 f.close()
-# %%
 
 # %%
 # Let us overwrite what is in demofile.txt using the write mode. I must reiterate this. Using "w" will
@@ -726,6 +709,7 @@ f.close()
 f = open("demofile.txt", "w")
 f.write("Only a Sith deals in absolutes.")
 f.close()
+# %%
 # Now we will reopen the file to see the changes we just made.
 f = open("demofile.txt")
 print(f.read())
@@ -777,13 +761,12 @@ print(array_1.ndim)
 # the dimension of the array we created. In this case, it is still a 1D array so it is all good. There
 # is no general array size limit but you are constrained by the amount of memory on your computer.
 # %%
-
-# %%
 # If you are familiar with C programming, working with NumPy arrays should be fairly straightforward.
 import numpy as np
 array_1 = np.array([1,2,3,4,5])
 print(array_1[0])
 print(array_1[4])
+
 # %%
 # Accessing the array works the same if your array is bigger than 1D. Just take care of the extra coordinates. (x,y) is [y][x]
 # If you are confused with how the indexing works, simply go to the Variable Explorer on the right and double-click on the array variable name.
@@ -794,6 +777,7 @@ print(array_2[0,0])
 print(array_2[1,0])
 print(array_2[0,:])                 # When you use ":", you ask for the entire row in this instance
 print(array_2.shape)
+
 # %%
 # Now let's reshape the array.
 array_3 = array_2.reshape((3,2))
@@ -802,6 +786,7 @@ print(array_3[0,0])
 print(array_3[2,0])
 print(array_3[:,0])                 # When you use ":", you ask for the entire column in this instance
 print(array_3.shape)
+
 # %%
 # Let's reshape from 2D to 1D this time.
 array_4 = array_3.reshape((6,))     # We are creating a 1D array of length 6
@@ -813,6 +798,39 @@ print(array_4.shape)
 # As you can see, is it important to know the dimensions of your multi-dimensional arrays when indexing.
 # Otherwise, you can end up making a mistake when grabbing data from a certain index.
 # %%
+# Since NumPy is useful for arrays, we can also take advantage of some matrix manipulation functions.
+# Let's set up two practice matrices.
+import numpy as np
+array1 = np.array([[1,2],[3,4]])
+array2 = np.array([[5,6],[7,8]])
+print(array1)
+print(array2)
+
+# %%
+# Now let's add them together.
+print(np.add(array1,array2))
+
+# %%
+# Now let's find the dot product (multiplication).
+print(np.dot(array1,array2))
+
+# %%
+# How about dividing them?
+print(np.divide(array1, array2))
+
+# %%
+# Let's check if we can transpose a matrix.
+print(array1.T)
+
+# %%
+array3 = np.zeros(6)
+print(type(array3[0]))
+print(array3)
+
+# %%
+array4 = np.ones((2,2), dtype = int)
+print(type(array4[0,0]))
+print(array4)
 
 # %%
 # There will be some times when you need to create an array of data to work with as test data or something else.
@@ -828,24 +846,6 @@ print(array_2)
 # The first input to arange is the start number. If left blank, it defaults to 0.
 # The second input is the stop number. The created array does not include this number. You must include it.
 # The third input is the step size. If left blank, it defaults to 1.
-# %%
-
-# %%
-# Since NumPy is useful for arrays, we can also take advantage of some matrix manipulation functions.
-# Let's set up two practice matrices.
-import numpy as np
-array1 = np.array([[1,2],[3,4]])
-array2 = np.array([[5,6],[7,8]])
-print(array1)
-print(array2)
-# Now let's add them together.
-print(np.add(array1,array2))
-# How about dividing them?
-print(np.divide(array1, array2))
-# Let's check if we can transpose a matrix.
-print(array1.T)
-# %%%
-
 # %%
 # NumPy also has another very important functionality. It can create pseudo random numbers. If your project or code
 # needs some sort of randomness in it, it is very easy to implement using this library. Let's view some examples.
@@ -863,7 +863,6 @@ numfloat_array = random.rand(4)               # Returns 1D array containing 4 nu
 print(numfloat_array)
 numfloat_array_2D = random.rand(2,2)          # Returns 2D array containing 4 numbers between 0 and 1
 print(numfloat_array_2D)
-# %%
 
 # %%
 # Now the previous examples only generated new random numbers. But what if we want to randomly choose from data we
@@ -877,6 +876,7 @@ new_array = random.choice(array_1)                # Return a random value from i
 print(new_array)
 new_array_2D = random.choice(array_1, size=(2,2)) # Return an array filled with random values from input array
 print(new_array_2D)
+
 # %%
 
 '''
@@ -918,8 +918,6 @@ plt.show()                      # Show the plot we created
 # list of how you can customize your plot through the plot() function, please visit the link below.
 # Website URL: https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot
 # %%
-
-# %%
 # Now let's show off some other ways of plotting courtesy of the Matplotlib website.
 # It is possible to create a plot using categorical variables instead of just numerical variables if need be.
 # We will also show that it is possible to create subplots within each figure you create.
@@ -939,8 +937,6 @@ plt.show()                                  # Show the plot
 # for the other plots. The figure we created has a width of 9 and height of 3 in inches. If we decided to create
 # a different plot that is not on the same window as the previous plot, we would need to invoke .figure() again.
 # %%
-
-# %%
 # Let's go and see a little bit more about the different plots besides line plots.
 # We will look into bar graphs first.
 import matplotlib.pyplot as plt
@@ -955,8 +951,6 @@ plt.show()
 # If you want, you don't have to add the color and width/height arguments if you want to stick to the default values of blue and 0.8
 # Try out each line that has been commented out to see the different plots. If you want to change the color yourself,
 # you need to use HTML color names or their corresponding Hex values.
-# %%
-
 # %%
 # Let's look into scatter plots next.
 # Let's use some functions from numpy to generate some data for us to work with.
